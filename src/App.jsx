@@ -1,9 +1,11 @@
+import { Button } from "./components/Button"
 
 function App() {
 
   return (
     <>
-      StoryBook - Practice
+      <h1>StoryBook - Practice</h1>
+      <Button label="Click Me"></Button>
     </>
   )
 }
