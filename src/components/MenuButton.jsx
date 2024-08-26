@@ -1,19 +1,26 @@
+
 import PropTypes from 'prop-types';
+import Icon from './Icons';
 
-export const MenuButton = ({ label, image, onClick }) => (
-    <button 
-        className="nav-item" 
-        onClick={onClick}>
-        <img 
-            src={image} 
-            alt={label} />
-        {label}
-    </button>
-);
+export const MenuButton = ({ iconName, label, onClick, selected }) => {
 
+    return (
+        <button 
+            className={`flex flex-col py-custom-xs px-custom-xs items-center rounded-custom-md ${selected ? 'bg-primary-darkBlue-200 text-primary-darkBlue-300' : 'bg-background-primary text-primary-darkBlue-200'}`}
+            onClick={onClick}>
+            {iconName && <Icon name={iconName} fill={selected ? 'text-primary-darkBlue-300' : 'text-primary-darkBlue-200'} />}            
+            <span className='py-custom-xs px-custom-xs'>
+                {label}
+            </span>
+        </button>
+    );
+
+    
+};
 MenuButton.propTypes = {
     label: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    iconName: PropTypes.string.isRequired,
+    selected: PropTypes.bool.isRequired,
     onClick: PropTypes.func,
 };
   
