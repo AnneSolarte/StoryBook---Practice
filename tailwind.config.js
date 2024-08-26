@@ -1,10 +1,21 @@
-import { background } from 'storybook/internal/theming';
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.css", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Nunito Sans"', 'sans-serif'],
+      },
+      fontSize: {
+        'caption-12': ['12px', '1.5'], 
+        'caption-10': ['10px', '1.5'],  
+        'caption-8': ['8px', '1.5'],    
+      },
+      fontWeight: {
+        'semibold': 600,
+        'bold': 700,
+        'regular': 400,
+      },
       padding: {
         "custom-xs": "4px",
         "custom-sm": "8px",

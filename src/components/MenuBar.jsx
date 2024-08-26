@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { MenuButton } from "./MenuButton";
 import PropTypes from 'prop-types';
 
+
 export const MenuBar = ({ buttons }) => {
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+    const handleButtonClick = (index) => {
+        setSelectedIndex(index);
+    };
+
     return (
       <div className="inline-flex w-auto flex-row py-custom-xs px-custom-xs gap-2 items-center bg-background-primary">
         {buttons.map((item, index) => (
@@ -9,8 +17,8 @@ export const MenuBar = ({ buttons }) => {
             key={index} 
             label={item.label} 
             iconName={item.iconName}
-            selected={item.selected}
-            onClick={item.onClick} />
+            selected={index === selectedIndex}
+            onClick={() => handleButtonClick(index)} />
         ))}
       </div>
     );
