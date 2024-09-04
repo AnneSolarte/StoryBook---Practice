@@ -1,11 +1,17 @@
-import { Button } from "./components/Button"
+
+import { Profile } from "./components/MenuItems/Profile"
+import catImage from "./assets/cat-image.png"
 
 function App() {
 
   return (
     <>
       <h1>StoryBook - Practice</h1>
-      <Button label="Click Me"></Button>
+      
+      <Profile  
+        name='Amanda Miguel'
+        points="120"
+        image={catImage} />
     </>
   )
 }

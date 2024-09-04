@@ -1,4 +1,4 @@
-import { MenuButton } from '../components/MenuButton';
+import { MenuButton } from '../components/MenuItems/MenuButton';
 
 export default {
   title: 'Components/MenuButton',
@@ -7,21 +7,14 @@ export default {
 
 const Template = (args) => <MenuButton {...args} />;
 
-export const NonSelectedButton = Template.bind({});
-NonSelectedButton.args = {
+export const Default = Template.bind({});
+Default.args = {
     label: 'Inicio',
     selected: false,
     iconName: 'inicio',
     onClick: () => console.log('Selected clicked') 
 };
 
-export const SelectedButton = Template.bind({});
-SelectedButton.args = {
-    label: 'Inicio',
-    selected: true,
-    iconName: 'inicio',
-    onClick: () => console.log('Non selected clicked') 
-};
 
 
 

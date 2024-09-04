@@ -1,4 +1,4 @@
-import { MenuBar } from '../components/MenuBar';
+import { MenuBar } from '../components/MenuItems/MenuBar';
 export default {
   title: 'Components/MenuBar',
   component: MenuBar,

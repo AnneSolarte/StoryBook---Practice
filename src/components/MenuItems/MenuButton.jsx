@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-import Icon from './Icons';
+import Icon from '../Icons';
 
 export const MenuButton = ({ iconName, label, onClick, selected }) => {
 

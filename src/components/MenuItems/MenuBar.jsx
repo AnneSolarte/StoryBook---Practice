@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 export const MenuBar = ({ buttons }) => {
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
     const handleButtonClick = (index) => {
         setSelectedIndex(index);
